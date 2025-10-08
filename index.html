@@ -1,67 +1,277 @@
 <!DOCTYPE html>
-<html class="img-no-display">
+<!-- Wilton MicroSystems LLC -->
+<html lang="en">
+
 <head>
-<link rel="icon" type="image/png" href="https://www.wiltonmicrosystems.com/favicon.png">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wilton MicroSystems LLC</title>
-<style>
-html {
-    height: 100%;
-    overflow: hidden;  
-}
-body {
-    background: url(web_images/bg.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-}
-div#outer {
-    display: table;
-    height: 100%;
-    width: 100%;
-}
-div#container {
-	display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
-#paragraph {
-	padding: 20px 0 30px 40px;
-	margin: 0 auto;
-	text-align: left;
-	width: 560px;
-	color: #146b9d;
-	font-size: 12pt;
-	font-weight: bold;
-	font-family: Verdana;
-}
+  <link rel="icon" type="image/png" href="https://www.wiltonmicrosystems.com/favicon.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wilton MicroSystems LLC</title>
+  <style>
+    /* Base Reset and Fonts */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-a {
-	text-align: center;
-	width: 560px;
-	color: #146b9d;
-	font-size: 12pt;
-	font-weight: bold;
-	font-family: Verdana;
-}
-</style>
+    body {
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    /* Color Scheme */
+    :root {
+      --crimson: #a0001e;
+      --grey: #4a4a4a;
+      --light-grey: #e6e6e6;
+      --white: #ffffff;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--crimson);
+      color: var(--white);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto
+    }
+
+    .company-name {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background-color: var(--grey);
+      color: var(--white);
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: var(--crimson);
+      margin-bottom: 20px;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .service {
+      background-color: var(--white);
+      padding: 30px;
+      border: 1px solid var(--light-grey);
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service h3 {
+      color: var(--grey);
+      margin-bottom: 15px;
+      font-size: 1.3em;
+    }
+
+    .service p {
+      font-size: 1em;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--grey);
+      color: var(--white);
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 5px;
+      font-weight: 500;
+      height: 25px;
+    }
+
+    footer img {
+      height: 25px;
+      width: auto
+    }
+
+    .follow-us {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0 0 0;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      section {
+        padding: 40px 20px;
+      }
+    }
+  </style>
 </head>
-<body>
-<div id="outer">
-<div id="container">
-<img src="web_images/wmsicon.png" />
-<p id="paragraph">Since 1986, Wilton MicroSystems has provided custom software development and technical guidance to clients in a wide variety of industries.</p>
-</br>
-<a href="mailto:info@wiltonmicrosystems.com">info@wiltonmicrosystems.com</a> 
-</br>
-</br>
-<p><img src="web_images/In-Blue-21.png" title="LinkedIn" alt="LinkedIn" width="21" height="21" align="middle"> <a href="https://linkedin.com/company/wiltonmicrosystems">Follow us</a></p>
-</div>
-</div>
 
-</body></html>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="web_images/wmsicon.png" alt="WMS">
+      <div class="company-name">Wilton MicroSystems LLC</div>
+    </div>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Custom Software. DevOps Expertise. Since 1986.</h1>
+    <p>Delivering trusted software solutions and automation guidance to help your business thrive in a DevOps-driven
+      world.</p>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      Since 1986, Wilton MicroSystems LLC has delivered high-quality custom software development and technical guidance
+      to clients across a wide range of industries. Our mission has always been to empower our clients with robust,
+      maintainable, and scalable solutions tailored to their needs. Today, our focus is on providing expert advisory
+      services in CI/CD automation and DevOps best practices. We help engineering teams modernize their workflows,
+      implement scalable pipelines, and embrace continuous delivery with confidence. We believe in collaboration,
+      quality, and building long-term relationships with our clients.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Technical Audits</h3>
+        <p>Comprehensive reviews of existing infrastructure, pipelines, and codebases to identify opportunities for
+          improvement.</p>
+      </div>
+      <div class="service">
+        <h3>CI/CD Automation</h3>
+        <p>Design and implement continuous integration and delivery pipelines tailored to your development lifecycle.
+        </p>
+      </div>
+      <div class="service">
+        <h3>DevOps Advisory</h3>
+        <p>Expert guidance on DevOps strategies, culture, and tooling to improve collaboration and software delivery
+          speed.</p>
+      </div>
+      <div class="service">
+        <h3>Custom Software Development</h3>
+        <p>Design and build quality software solutions customized to your workflow and industry requirements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>&copy; 1986–2025 Wilton MicroSystems LLC. All rights reserved.</p>
+    <p>Email: info@wiltonmicrosystems.com</p>
+    <p>
+    <div class="follow-us">
+      <img style="vertical-align:middle" src="web_images/linkedin.png" title="LinkedIn" alt="LinkedIn">
+      <span><a href="https://linkedin.com/company/wiltonmicrosystems">Follow us</a></span>
+    </div>
+    </p>
+  </footer>
+
+</body>
+
+</html>
